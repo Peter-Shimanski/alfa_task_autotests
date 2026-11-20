@@ -1,0 +1,31 @@
+{
+  "name": "alfa-task-autotests",
+  "version": "1.0.0",
+  "scripts": {
+    "generateReport": "npx allure generate allure-results -o allure-report --clean",
+    "serveReport": "npx allure open allure-report",
+    "showAllureReport": "npm run generateReport && npm run serveReport",
+    "typecheck": "tsc --noEmit",
+    "pretest": "npm install && npm run typecheck",
+    "test": "npx playwright test --config=src/playwright.config.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@faker-js/faker": "10.6.0",
+    "@playwright/test": "1.65.1",
+    "@types/node": "26.6.6",
+    "@typescript-eslint/eslint-plugin": "8.72.2",
+    "@typescript-eslint/parser": "8.72.2",
+    "allure-commandline": "2.46.1",
+    "allure-js-commons": "3.14.0",
+    "allure-playwright": "3.14.0",
+    "dotenv": "18.0.10",
+    "eslint": "10.15.0",
+    "eslint-config-prettier": "10.1.8",
+    "prettier": "3.10.1",
+    "typescript": "7.0.2"
+  }
+}
